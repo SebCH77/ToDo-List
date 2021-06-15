@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #304c79;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-app {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  width: 520px;
+  min-height: 600px;
+  background: #202d42;
+  text-align: center;
+  margin: 15px auto;
+  border-radius: 15px;
+}
+
+h1 {
+  margin: 30px 0;
+  color: #fff;
+  font-size: 24px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.todo-form {
+  margin-bottom: 30px;
+}
+
+.todo-input {
+  padding: 8px 32px 14px 16px;
+  border-radius: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  outline: none;
+  width: 350px;
+  background: transparent;
+  color: #fff;
+}
+
+.todo-input2 {
+  padding: 8px 32px 14px 16px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  outline: none;
+  width: 350px;
+  background: transparent;
+  color: rgb(255, 255, 255);
+}
+
+.todo-input::placeholder {
+  color: #ffffff;
+}
+
+.todo-input2::placeholder {
+  color: #ffffff;
+}
+
+.todo-button {
+  padding: 8px 10px 10px 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-transform: capitalize;
+}
+
+.todo-button2 {
+  padding: 8px 10px 10px 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  background: rgb(243, 202, 140);
+  color: rgb(0, 0, 0);
+  text-transform: capitalize;
+}
+
+.todo-input.edit {
+  border: 2px solid #1e80ad;
+  margin-top: 50px;
+}
+
+.todo-button.edit {
+  padding: 8px 10px 10px 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  background: #1e80ad;
+  color: rgb(255, 255, 255);
+  text-transform: capitalize;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 4px auto;
+  color: #fff;
+  background: rgb(35, 92, 167);
+  padding: 10px;
+  border-radius: 5px;
+  width: 90%;
 }
 
-.App-link {
-  color: #61dafb;
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete-icon {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.edit-icon {
+  color: #fff;
 }
